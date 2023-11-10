@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/product")
 public class ProductController {
     @Autowired
     private ProductService productService;
@@ -18,7 +18,7 @@ public class ProductController {
         return productService.getProducts();
     }
 
-    @PostMapping("/insert")
+    @PostMapping("/create")
     public Product insert(@RequestBody Product product) {
         return productService.addProduct(product);
     }
